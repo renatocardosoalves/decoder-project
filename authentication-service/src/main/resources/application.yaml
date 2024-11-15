@@ -1,3 +1,16 @@
 spring:
   application:
     name: authentication-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/authentication_db
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.PostgresSQLDialect
+      jdbc:
+        lob.non-contextual-creation: true
+    properties:
+      hibernate:
+        show_sql: true
